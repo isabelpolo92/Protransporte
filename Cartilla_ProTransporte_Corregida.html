@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cartilla – Prevención y Reporte del Acoso Sexual Laboral</title>
+<style>
+  /* ── RESET & PAGE ─────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    line-height: 1.75;
+    color: #1a2a3a;
+    background: #ffffff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── TYPOGRAPHY ───────────────────────────────────────────── */
+  h1 { font-size: 22pt; color: #1a4f80; font-weight: 700; }
+  h2 { font-size: 14pt; color: #1a4f80; font-weight: 700; margin-bottom: 6px; }
+  h3 { font-size: 11.5pt; color: #2b6cb0; font-weight: 700; margin-bottom: 4px; }
+  p  { margin-bottom: 9px; }
+  ul, ol { padding-left: 20px; margin-bottom: 10px; }
+  li { margin-bottom: 4px; }
+  a  { color: #1a6db5; text-decoration: underline; word-break: break-all; }
+  a:hover { color: #0f4880; }
+
+  /* ── LAYOUT ───────────────────────────────────────────────── */
+  .page-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* ── CHAPTER BREAKS ───────────────────────────────────────── */
+  .chapter { break-before: page; page-break-before: always; }
+
+  /* ── COVER ────────────────────────────────────────────────── */
+  .cover {
+    background: #ddeeff;
+    border: 3px solid #90bce8;
+    border-radius: 10px;
+    padding: 48px 40px 44px 40px;
+    text-align: center;
+    min-height: 240px;
+  }
+  .cover .logo-bar {
+    font-size: 10pt;
+    color: #2b6cb0;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #90bce8;
+    padding-bottom: 12px;
+  }
+  .cover h1 {
+    font-size: 24pt;
+    color: #0d3a6b;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  .cover .subtitle {
+    font-size: 13pt;
+    color: #2b6cb0;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+  .cover .meta {
+    font-size: 9.5pt;
+    color: #4a7baa;
+    margin-top: 24px;
+  }
+  .cover .badge {
+    display: inline-block;
+    background: #1a4f80;
+    color: #ffffff;
+    font-size: 9pt;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-top: 18px;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── SECTION HEADER BAND ──────────────────────────────────── */
+  .section-header {
+    background: #1a4f80;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 0;
+    font-size: 13pt;
+    font-weight: 700;
+  }
+  .section-body {
+    border: 1.5px solid #90bce8;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    padding: 16px 18px 14px 18px;
+    margin-bottom: 18px;
+    background: #f5faff;
+  }
+
+  /* ── DEFINITION BOX ───────────────────────────────────────── */
+  .def-box {
+    background: #e8f3ff;
+    border-left: 5px solid #1a6db5;
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  .def-box p { margin-bottom: 0; }
+
+  /* ── LAW BOX ──────────────────────────────────────────────── */
+  .law-box {
+    background: #ddeeff;
+    border: 1.5px solid #90bce8;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    font-size: 10pt;
+  }
+  .law-box strong { color: #0d3a6b; }
+
+  /* ── CONDUCT GRID ─────────────────────────────────────────── */
+  .conduct-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 14px;
+    font-size: 10.5pt;
+  }
+  .conduct-table th {
+    background: #2b6cb0;
+    color: #ffffff;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 700;
+    border: 1px solid #90bce8;
+  }
+  .conduct-table td {
+    padding: 7px 12px;
+    border: 1px solid #c0d8ef;
+    vertical-align: top;
+  }
+  .conduct-table tr:nth-child(even) td { background: #edf5ff; }
+  .conduct-table tr:nth-child(odd)  td { background: #f9fcff; }
+
+  /* ── STEPS ────────────────────────────────────────────────── */
+  .steps-list {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 14px;
+  }
+  .steps-list li {
+    counter-increment: step-counter;
+    padding: 10px 12px 10px 50px;
+    position: relative;
+    background: #f0f7ff;
+    border: 1px solid #c0d8ef;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  .steps-list li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1a4f80;
+    color: #ffffff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 10.5pt;
+  }
+
+  /* ── CHANNEL CARDS ────────────────────────────────────────── */
+  .channel-block {
+    background: #f0f7ff;
+    border: 1.5px solid #90bce8;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+  .channel-block .ch-title {
+    font-weight: 700;
+    color: #0d3a6b;
+    font-size: 10.5pt;
+    margin-bottom: 4px;
+  }
+  .channel-block p { margin: 0; font-size: 10.5pt; }
+
+  /* ── RIGHTS LIST ──────────────────────────────────────────── */
+  .rights-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 14px;
+  }
+  .rights-list li {
+    padding: 7px 10px 7px 14px;
+    border-left: 4px solid #2b6cb0;
+    background: #f5faff;
+    margin-bottom: 6px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* ── CONFIDENTIALITY BOX ──────────────────────────────────── */
+  .conf-box {
+    background: #e8f3ff;
+    border: 2px solid #2b6cb0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  .conf-box h3 { color: #0d3a6b; margin-bottom: 8px; }
+
+  /* ── FOOTER STRIP ─────────────────────────────────────────── */
+  .footer-strip {
+    background: #1a4f80;
+    color: #d4e8ff;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 9pt;
+    margin-top: 20px;
+  }
+  .footer-strip a { color: #a8d4ff; }
+
+  /* ── IMPORTANT CALLOUT ────────────────────────────────────── */
+  .callout {
+    background: #fff8e1;
+    border-left: 5px solid #f5a623;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: 10.5pt;
+  }
+
+  /* ── TABLE OF CONTENTS ────────────────────────────────────── */
+  .toc-list {
+    list-style: none;
+    padding: 0;
+  }
+  .toc-list li {
+    padding: 6px 0;
+    border-bottom: 1px dotted #90bce8;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10.5pt;
+  }
+  .toc-list li a {
+    text-decoration: none;
+    color: #1a4f80;
+    font-weight: 700;
+  }
+  .toc-list li a:hover { text-decoration: underline; }
+  .toc-num { color: #4a7baa; font-size: 9.5pt; }
+
+  /* ── ASISTENCIA PAGE ──────────────────────────────────────── */
+  .asistencia-page {
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 36px 24px 28px 24px;
+    background: #f0f7ff;
+    border: 2px solid #90bce8;
+    border-radius: 10px;
+  }
+  .asistencia-header {
+    width: 100%;
+    background: #1a4f80;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    padding: 14px 22px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .asistencia-header h2 {
+    color: #ffffff;
+    font-size: 16pt;
+    margin: 0;
+  }
+  .asistencia-header p {
+    color: #c8e0ff;
+    font-size: 10pt;
+    margin: 4px 0 0 0;
+  }
+  .asistencia-body {
+    width: 100%;
+    background: #ffffff;
+    border: 1.5px solid #90bce8;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 22px 22px 22px;
+    margin-bottom: 20px;
+  }
+  .asistencia-body p {
+    font-size: 10.5pt;
+    color: #1a2a3a;
+    margin-bottom: 14px;
+  }
+  .asistencia-iframe-wrap {
+    width: 100%;
+    border: 1.5px solid #90bce8;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: #f5faff;
+  }
+  .asistencia-iframe-wrap iframe {
+    width: 100%;
+    height: 520px;
+    border: none;
+    display: block;
+  }
+  .btn-form {
+    display: inline-block;
+    background: #1a4f80;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 11pt;
+    padding: 12px 32px;
+    border-radius: 6px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+  .btn-form:hover { background: #0d3a6b; }
+  .asistencia-note {
+    font-size: 9.5pt;
+    color: #4a7baa;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .asistencia-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px dashed #90bce8;
+    margin: 14px 0;
+  }
+
+  /* ── ANNEX TABLE ──────────────────────────────────────────── */
+  .annex-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin-bottom: 14px;
+  }
+  .annex-table th {
+    background: #1a4f80;
+    color: #fff;
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #90bce8;
+  }
+  .annex-table td {
+    padding: 8px 12px;
+    border: 1px solid #c0d8ef;
+    background: #f5faff;
+    vertical-align: top;
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- ════════════════ CONFIRMACIÓN DE ASISTENCIA ════════════ -->
+  <div class="asistencia-page">
+    <div class="asistencia-header">
+      <h2>Confirmación de Asistencia</h2>
+      <p>Socialización: Prevención y Reporte del Acoso Sexual Laboral &nbsp;|&nbsp; PRO TRANSPORTE</p>
+    </div>
+    <div class="asistencia-body">
+      <p>Para dejar constancia de tu participación en esta socialización, por favor diligencia el siguiente formulario de asistencia. Tu registro es <strong>obligatorio</strong> y garantiza el cumplimiento de los compromisos de capacitación de la empresa.</p>
+
+      <div class="asistencia-iframe-wrap">
+        <iframe
+          src="https://forms.cloud.microsoft/pages/responsepage.aspx?id=AxPjAzvOo0-wBayv2Sgc0QAWshW33KxDmcgBcaqeFx9UN0lRSERNNFNZSUIwT0RJSDNJOTQ4VDJFRC4u&route=shorturl"
+          title="Formulario de Confirmación de Asistencia"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <hr class="asistencia-divider"/>
+
+      <p style="text-align:center; font-size:10pt; color:#4a7baa; margin-bottom:10px;">
+        Si el formulario no carga correctamente en tu navegador, haz clic en el botón para abrirlo directamente:
+      </p>
+      <p style="text-align:center; margin-bottom:6px;">
+        <a class="btn-form"
+           href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=AxPjAzvOo0-wBayv2Sgc0QAWshW33KxDmcgBcaqeFx9UN0lRSERNNFNZSUIwT0RJSDNJOTQ4VDJFRC4u&route=shorturl"
+           target="_blank" rel="noopener">
+          Abrir Formulario de Asistencia
+        </a>
+      </p>
+      <p class="asistencia-note">
+        Todos los datos registrados son confidenciales y se usan únicamente con fines de control de asistencia.
+      </p>
+    </div>
+  </div>
+
+  <div style="break-before: page"></div>
+
+  <!-- ════════════════════ PORTADA ════════════════════ -->
+  <div class="cover">
+    <div class="logo-bar">PRO TRANSPORTE S.A.S &nbsp;|&nbsp; Sistema Integrado de Gestión</div>
+    <h1>Prevención y Reporte del<br>Acoso Sexual Laboral</h1>
+    <p class="subtitle">Cartilla de Socialización para Colaboradores</p>
+    <p style="color:#2b6cb0; font-size:10.5pt;">Conoce tus derechos, identifica las conductas y accede a los canales de reporte.</p>
+    <div class="badge">Código F-GE-28 &nbsp;|&nbsp; Versión 1 &nbsp;|&nbsp; Mayo 2026</div>
+    <p class="meta">Elaboró: Gestión Estratégica y HSEQ &nbsp;|&nbsp; Aprobó: Representante Legal</p>
+  </div>
+
+  <div style="break-before: page"></div>
+
+  <!-- ════════════════════ TABLA DE CONTENIDO ════════════════════ -->
+  <div class="chapter">
+    <div class="section-header">Contenido de esta Cartilla</div>
+    <div class="section-body">
+      <ul class="toc-list">
+        <li><a href="#definicion">1. ¿Qué es el Acoso Sexual Laboral?</a><span class="toc-num">pág. 3</span></li>
+        <li><a href="#norma">2. Marco Normativo</a><span class="toc-num">pág. 3</span></li>
+        <li><a href="#conductas">3. Tipos de Conductas</a><span class="toc-num">pág. 4</span></li>
+        <li><a href="#no-es">4. ¿Qué NO es Acoso Sexual Laboral?</a><span class="toc-num">pág. 4</span></li>
+        <li><a href="#derechos">5. Tus Derechos como Colaborador/a</a><span class="toc-num">pág. 5</span></li>
+        <li><a href="#como-reportar">6. ¿Cómo Presentar un Reporte?</a><span class="toc-num">pág. 5</span></li>
+        <li><a href="#canales">7. Canales de Reporte</a><span class="toc-num">pág. 6</span></li>
+        <li><a href="#proceso">8. Proceso Interno de Atención</a><span class="toc-num">pág. 6</span></li>
+        <li><a href="#proteccion">9. Medidas de Protección</a><span class="toc-num">pág. 7</span></li>
+        <li><a href="#confidencialidad">10. Confidencialidad</a><span class="toc-num">pág. 7</span></li>
+        <li><a href="#cocola">11. El COCOLA en nuestra empresa</a><span class="toc-num">pág. 8</span></li>
+        <li><a href="#compromisos">12. Compromisos de la Empresa</a><span class="toc-num">pág. 8</span></li>
+        <li><a href="#anexos">13. Recursos y Anexos</a><span class="toc-num">pág. 9</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 1. DEFINICIÓN ════════════════════ -->
+  <div class="chapter" id="definicion">
+    <div class="section-header">1. ¿Qué es el Acoso Sexual Laboral?</div>
+    <div class="section-body">
+      <div class="def-box">
+        <p><strong>El acoso sexual laboral</strong> es toda conducta persistente o reiterada de naturaleza sexual no consentida, que tenga lugar en el contexto del trabajo o con ocasión de la relación laboral, y que cause daño, humillación, intimidación o genere un ambiente de trabajo hostil u ofensivo para la persona que lo padece.</p>
+      </div>
+      <p>Puede manifestarse de forma verbal, física, visual o digital y puede ocurrir entre personas de cualquier género, independientemente del cargo o jerarquía. El acoso sexual laboral afecta la dignidad, la salud mental y el bienestar de los trabajadores, y es una forma de discriminación inaceptable.</p>
+      <p><strong>Importante:</strong> el acoso puede ocurrir una sola vez si es lo suficientemente grave, o de manera reiterada con menor intensidad. En ambos casos constituye una conducta sancionable.</p>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 2. MARCO NORMATIVO ════════════════════ -->
+  <div id="norma">
+    <div class="section-header">2. Marco Normativo</div>
+    <div class="section-body">
+      <div class="law-box"><strong>Ley 1010 de 2006</strong> – Define y regula el acoso laboral en Colombia, establece medidas preventivas, correctivas y sancionatorias.</div>
+      <div class="law-box"><strong>Resolución 2646 de 2008</strong> – Define responsabilidades para la identificación, evaluación y prevención de factores de riesgo psicosocial en el trabajo.</div>
+      <div class="law-box"><strong>Código Sustantivo del Trabajo – Art. 57 y 58</strong> – Establece las obligaciones del empleador de proteger la dignidad e integridad de los trabajadores.</div>
+      <div class="law-box"><strong>Ley 1257 de 2008</strong> – Normas de sensibilización, prevención y sanción de formas de violencia y discriminación contra la mujer.</div>
+      <div class="law-box"><strong>Ley 1751 de 2015 (Derecho Fundamental a la Salud)</strong> – Garantiza el derecho a la salud integral, incluyendo la salud mental.</div>
+      <div class="law-box"><strong>Decreto 1072 de 2015</strong> – Decreto Único Reglamentario del Sector Trabajo, consolida las normas sobre protección laboral.</div>
+      <p style="font-size:10pt; color:#4a7baa;">PRO TRANSPORTE S.A.S actúa bajo estos marcos y cuenta con el Comité de Convivencia Laboral (COCOLA) para la atención de los casos.</p>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 3. TIPOS DE CONDUCTAS ════════════════════ -->
+  <div class="chapter" id="conductas">
+    <div class="section-header">3. Tipos de Conductas que Constituyen Acoso Sexual Laboral</div>
+    <div class="section-body">
+      <table class="conduct-table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Ejemplos de conducta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Verbales</strong></td>
+            <td>Comentarios sexuales incomodos; bromas o insinuaciones sexuales; invitaciones no deseadas; comentarios sobre el cuerpo o apariencia; amenazas o chantajes sexuales.</td>
+          </tr>
+          <tr>
+            <td><strong>Físicas</strong></td>
+            <td>Contacto físico no consentido; acercamientos incómodos; tocamientos; bloqueo del paso o intimidación física.</td>
+          </tr>
+          <tr>
+            <td><strong>Digitales / Virtuales</strong></td>
+            <td>Mensajes sexuales por cualquier medio; envío de imágenes o videos inapropiados; llamadas incómodas; acoso por redes sociales; seguimiento digital no autorizado.</td>
+          </tr>
+          <tr>
+            <td><strong>Visuales / Gestuales</strong></td>
+            <td>Miradas o gestos incómodos de connotación sexual; exhibición de material pornográfico o de contenido sexual; persecución reiterada; hostigamiento continuado.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>Recuerda:</strong> Cualquiera de estas conductas puede constituir acoso sexual laboral, sin importar el medio utilizado ni el cargo de quien las ejerce.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 4. QUÉ NO ES ════════════════════ -->
+  <div id="no-es">
+    <div class="section-header">4. ¿Qué NO es Acoso Sexual Laboral?</div>
+    <div class="section-body">
+      <p>Es importante distinguir el acoso sexual laboral de situaciones que, aunque puedan generar incomodidad, <strong>no constituyen acoso</strong>:</p>
+      <ul>
+        <li>Las instrucciones o llamados de atención legítimos relacionados con el desempeño laboral.</li>
+        <li>Las relaciones sentimentales voluntarias y consentidas entre adultos, siempre que no generen presión o condicionamiento.</li>
+        <li>Los comentarios o bromas que ambas partes claramente interpretan como amistosos y que no generan malestar.</li>
+        <li>Las diferencias de criterio, conflictos de trabajo o discusiones propias del entorno laboral sin connotación sexual.</li>
+      </ul>
+      <p>Si tienes duda sobre si una situación constituye acoso sexual laboral, puedes consultar con el COCOLA de manera confidencial.</p>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 5. DERECHOS ════════════════════ -->
+  <div class="chapter" id="derechos">
+    <div class="section-header">5. Tus Derechos como Colaborador/a</div>
+    <div class="section-body">
+      <ul class="rights-list">
+        <li>Trabajar en un ambiente digno, seguro y libre de cualquier forma de acoso o violencia.</li>
+        <li>Presentar un reporte o queja sin temor a represalias, discriminación ni consecuencias laborales negativas.</li>
+        <li>Que tu reporte sea recibido, investigado y atendido de manera oportuna, imparcial y confidencial.</li>
+        <li>Recibir medidas de protección mientras se adelanta la investigación, si así lo solicitas.</li>
+        <li>Conocer el estado de tu caso y las medidas adoptadas por la empresa.</li>
+        <li>Acceder a acompañamiento psicosocial durante el proceso.</li>
+        <li>Que tu identidad y los datos suministrados sean tratados con estricta confidencialidad.</li>
+        <li>No ser revictimizado durante el proceso de atención.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 6. CÓMO REPORTAR ════════════════════ -->
+  <div id="como-reportar">
+    <div class="section-header">6. ¿Cómo Presentar un Reporte?</div>
+    <div class="section-body">
+      <p>Si eres víctima, testigo o tienes conocimiento de un caso de acoso sexual laboral, sigue estos pasos:</p>
+      <ol class="steps-list">
+        <li><strong>Documenta los hechos:</strong> anota fechas, lugares, personas involucradas, testigos y cualquier evidencia disponible (mensajes, correos, capturas de pantalla, grabaciones).</li>
+        <li><strong>Elige el canal de reporte</strong> que sea más seguro y cómodo para ti (ver sección 7 de esta cartilla).</li>
+        <li><strong>Diligencia el Formato F-GE-28</strong> con la información más detallada posible. No es obligatorio que esté completo para iniciar la atención.</li>
+        <li><strong>Indica las medidas de protección</strong> que consideres necesarias (restricción de contacto, cambio de turno, acompañamiento psicosocial, entre otras).</li>
+        <li><strong>Autoriza el tratamiento de tus datos</strong> para que la empresa pueda gestionar tu caso con confidencialidad.</li>
+        <li><strong>Recibe el número de caso</strong> asignado por la empresa para hacer seguimiento a tu reporte.</li>
+      </ol>
+      <div class="callout">
+        <strong>No tienes que enfrentarlo solo/a.</strong> El COCOLA y el área de HSEQ están disponibles para orientarte en todo momento.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 7. CANALES ════════════════════ -->
+  <div class="chapter" id="canales">
+    <div class="section-header">7. Canales de Reporte</div>
+    <div class="section-body">
+      <div class="channel-block">
+        <div class="ch-title">Formulario Digital (Recomendado)</div>
+        <p>Accede al formato de reporte en línea de manera segura y confidencial:<br>
+        <a href="https://forms.gle/9vV2q8EKkANzX3Vm6" target="_blank">https://forms.gle/9vV2q8EKkANzX3Vm6</a></p>
+      </div>
+      <div class="channel-block">
+        <div class="ch-title">Correo Electrónico</div>
+        <p>Envía tu reporte directamente a gerencia de manera confidencial:<br>
+        <a href="mailto:gerencia@protransporte.com.co">gerencia@protransporte.com.co</a></p>
+      </div>
+      <div class="channel-block">
+        <div class="ch-title">Formato Físico</div>
+        <p>Solicita o descarga el <strong>Formato F-GE-28 – Reporte de Presunto Acoso Sexual Laboral</strong> y entrégalo en la oficina de Gestión Estratégica y HSEQ.</p>
+      </div>
+      <div class="channel-block">
+        <div class="ch-title">Buzón de PQRS (Peticiones, Quejas, Reclamos y Sugerencias)</div>
+        <p>Deposita tu reporte escrito en el <strong>Buzón de PQRS</strong> ubicado en las instalaciones de la empresa. Tu identidad puede mantenerse anónima si así lo deseas.</p>
+      </div>
+      <div class="channel-block">
+        <div class="ch-title">Reporte Presencial</div>
+        <p>Puedes presentarte directamente ante un miembro del COCOLA o del área de HSEQ para recibir orientación personalizada.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 8. PROCESO INTERNO ════════════════════ -->
+  <div id="proceso">
+    <div class="section-header">8. Proceso Interno de Atención</div>
+    <div class="section-body">
+      <table class="conduct-table">
+        <thead>
+          <tr>
+            <th style="width:30%;">Etapa</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Recepción</strong></td>
+            <td>La empresa recibe el reporte por cualquiera de los canales disponibles y asigna un número de caso y un responsable receptor.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Medidas inmediatas</strong></td>
+            <td>Si es necesario, se adoptan medidas de protección para la presunta víctima mientras se desarrolla la investigación.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Investigación</strong></td>
+            <td>El COCOLA y/o el área de HSEQ recopilan evidencias, escuchan a las partes y evalúan los hechos de manera imparcial.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Resolución</strong></td>
+            <td>Se toman las acciones disciplinarias, correctivas o de remisión correspondientes, conforme a la normatividad vigente.</td>
+          </tr>
+          <tr>
+            <td><strong>5. Seguimiento</strong></td>
+            <td>Se verifica la efectividad de las medidas adoptadas y se garantiza que no haya represalias contra la persona que reportó.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 9. MEDIDAS DE PROTECCIÓN ════════════════════ -->
+  <div class="chapter" id="proteccion">
+    <div class="section-header">9. Medidas de Protección Disponibles</div>
+    <div class="section-body">
+      <p>Si eres víctima, puedes solicitar las siguientes medidas de protección mientras se tramita tu caso:</p>
+      <ul class="rights-list">
+        <li><strong>Restricción de contacto</strong> entre las partes involucradas.</li>
+        <li><strong>Cambio temporal de turno</strong> para evitar coincidencia de horarios.</li>
+        <li><strong>Cambio de ruta o área</strong> de trabajo.</li>
+        <li><strong>Acompañamiento psicosocial</strong> por parte del equipo de bienestar.</li>
+        <li><strong>Teletrabajo temporal</strong> mientras avanza la investigación.</li>
+        <li><strong>Otra medida</strong> que consideres necesaria para garantizar tu seguridad y bienestar.</li>
+      </ul>
+      <div class="callout">
+        Estas medidas son <strong>preventivas y temporales</strong>; no implican juicio de responsabilidad. Su propósito es proteger tu integridad durante el proceso.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 10. CONFIDENCIALIDAD ════════════════════ -->
+  <div id="confidencialidad">
+    <div class="section-header">10. Confidencialidad</div>
+    <div class="section-body">
+      <div class="conf-box">
+        <h3>Compromiso de confidencialidad</h3>
+        <p>Toda la información contenida en los reportes y en el proceso de investigación tendrá carácter <strong>estrictamente confidencial</strong> y será tratada conforme a la normatividad sobre protección de datos personales (Ley 1581 de 2012) y prevención del acoso sexual laboral.</p>
+      </div>
+      <ul>
+        <li>Solo el personal autorizado tendrá acceso a la información del caso.</li>
+        <li>Los datos personales de quien reporta no serán divulgados sin su consentimiento.</li>
+        <li>Queda <strong>prohibido</strong> tomar represalias contra cualquier persona que presente un reporte de buena fe.</li>
+        <li>La información del caso no será utilizada para fines distintos a la investigación y resolución del mismo.</li>
+        <li>Los archivos físicos y digitales del caso serán custodiados con medidas de seguridad adecuadas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 11. COCOLA ════════════════════ -->
+  <div class="chapter" id="cocola">
+    <div class="section-header">11. El COCOLA en PRO TRANSPORTE</div>
+    <div class="section-body">
+      <p>El <strong>Comité de Convivencia Laboral (COCOLA)</strong> es el órgano interno encargado de promover un entorno de trabajo respetuoso y de atender las situaciones de acoso laboral y sexual que se presenten en la empresa.</p>
+      <h3>Funciones principales del COCOLA:</h3>
+      <ul>
+        <li>Recibir y tramitar de manera confidencial los reportes de acoso sexual y laboral.</li>
+        <li>Escuchar a las partes involucradas y generar espacios de diálogo.</li>
+        <li>Proponer e implementar medidas preventivas y correctivas.</li>
+        <li>Hacer seguimiento a los compromisos y acciones adoptadas.</li>
+        <li>Promover campañas de sensibilización sobre convivencia y respeto en el trabajo.</li>
+      </ul>
+      <div class="def-box">
+        <p><strong>Gestora HSEQ / COCOLA:</strong> Para comunicarte con el Comité, puedes hacerlo a través de cualquiera de los canales indicados en la sección 7 de esta cartilla.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 12. COMPROMISOS ════════════════════ -->
+  <div id="compromisos">
+    <div class="section-header">12. Compromisos de PRO TRANSPORTE</div>
+    <div class="section-body">
+      <p>PRO TRANSPORTE S.A.S se compromete a:</p>
+      <ul class="rights-list">
+        <li>Mantener una política de <strong>cero tolerancia</strong> frente al acoso sexual laboral.</li>
+        <li>Garantizar canales de reporte accesibles, seguros y confidenciales para todos los colaboradores.</li>
+        <li>Investigar de manera imparcial y oportuna cada reporte recibido.</li>
+        <li>Adoptar las medidas correctivas y disciplinarias que correspondan según la gravedad de los hechos.</li>
+        <li>Proteger a quienes reporten de buena fe frente a cualquier forma de represalia.</li>
+        <li>Capacitar y sensibilizar permanentemente a todos los colaboradores sobre prevención del acoso.</li>
+        <li>Actualizar periódicamente los protocolos y herramientas de atención.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════════════════════ 13. ANEXOS / RECURSOS ════════════════════ -->
+  <div class="chapter" id="anexos">
+    <div class="section-header">13. Recursos y Anexos</div>
+    <div class="section-body">
+      <table class="annex-table">
+        <thead>
+          <tr>
+            <th>Recurso</th>
+            <th>Medio / Enlace</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Formato de Reporte de Presunto Acoso Sexual Laboral (digital)</td>
+            <td><a href="https://forms.gle/9vV2q8EKkANzX3Vm6" target="_blank">https://forms.gle/9vV2q8EKkANzX3Vm6</a></td>
+          </tr>
+          <tr>
+            <td>Correo electrónico de reporte</td>
+            <td><a href="mailto:gerencia@protransporte.com.co">gerencia@protransporte.com.co</a></td>
+          </tr>
+          <tr>
+            <td>Formato físico</td>
+            <td>F-GE-28 – Reporte de Presunto Acoso Sexual Laboral (disponible en oficina HSEQ)</td>
+          </tr>
+          <tr>
+            <td>Buzón de PQRS</td>
+            <td>Oficina principal de PRO TRANSPORTE</td>
+          </tr>
+          <tr>
+            <td>Ley 1010 de 2006 – Acoso Laboral</td>
+            <td><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=19081" target="_blank">https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=19081</a></td>
+          </tr>
+          <tr>
+            <td>Ley 1257 de 2008 – No violencia contra la mujer</td>
+            <td><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=34054" target="_blank">https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=34054</a></td>
+          </tr>
+          <tr>
+            <td>Línea 155 – Orientación a mujeres víctimas de violencia</td>
+            <td>Llamada gratuita desde cualquier operador en Colombia</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ════════════════════ PIE DE PÁGINA ════════════════════ -->
+  <div class="footer-strip">
+    PRO TRANSPORTE S.A.S &nbsp;|&nbsp; COCOLA – Comité de Convivencia Laboral &nbsp;|&nbsp;
+    Gestora HSEQ &nbsp;|&nbsp; <a href="mailto:gerencia@protransporte.com.co">gerencia@protransporte.com.co</a>
+    &nbsp;|&nbsp; Código F-GE-28 – Versión 1 – Mayo 2026
+  </div>
+
+</div><!-- /page-wrap -->
+</body>
+</html>
