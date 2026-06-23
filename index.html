@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,12 +8,12 @@
 <style>
   /* ── RESET & PAGE ─────────────────────────────────────────── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   @page {
     size: A4;
     margin: 18mm 16mm 18mm 16mm;
   }
-
+ 
   body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11pt;
@@ -22,7 +23,7 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-
+ 
   /* ── TYPOGRAPHY ───────────────────────────────────────────── */
   h1 { font-size: 22pt; color: #1a4f80; font-weight: 700; }
   h2 { font-size: 14pt; color: #1a4f80; font-weight: 700; margin-bottom: 6px; }
@@ -32,16 +33,16 @@
   li { margin-bottom: 4px; }
   a  { color: #1a6db5; text-decoration: underline; word-break: break-all; }
   a:hover { color: #0f4880; }
-
+ 
   /* ── LAYOUT ───────────────────────────────────────────────── */
   .page-wrap {
     max-width: 720px;
     margin: 0 auto;
   }
-
+ 
   /* ── CHAPTER BREAKS ───────────────────────────────────────── */
   .chapter { break-before: page; page-break-before: always; }
-
+ 
   /* ── COVER ────────────────────────────────────────────────── */
   .cover {
     background: #ddeeff;
@@ -89,7 +90,7 @@
     margin-top: 18px;
     letter-spacing: 0.06em;
   }
-
+ 
   /* ── SECTION HEADER BAND ──────────────────────────────────── */
   .section-header {
     background: #1a4f80;
@@ -108,7 +109,7 @@
     margin-bottom: 18px;
     background: #f5faff;
   }
-
+ 
   /* ── DEFINITION BOX ───────────────────────────────────────── */
   .def-box {
     background: #e8f3ff;
@@ -118,7 +119,7 @@
     margin-bottom: 16px;
   }
   .def-box p { margin-bottom: 0; }
-
+ 
   /* ── LAW BOX ──────────────────────────────────────────────── */
   .law-box {
     background: #ddeeff;
@@ -129,7 +130,7 @@
     font-size: 10pt;
   }
   .law-box strong { color: #0d3a6b; }
-
+ 
   /* ── CONDUCT GRID ─────────────────────────────────────────── */
   .conduct-table {
     width: 100%;
@@ -152,7 +153,7 @@
   }
   .conduct-table tr:nth-child(even) td { background: #edf5ff; }
   .conduct-table tr:nth-child(odd)  td { background: #f9fcff; }
-
+ 
   /* ── STEPS ────────────────────────────────────────────────── */
   .steps-list {
     counter-reset: step-counter;
@@ -186,7 +187,7 @@
     font-weight: 700;
     font-size: 10.5pt;
   }
-
+ 
   /* ── CHANNEL CARDS ────────────────────────────────────────── */
   .channel-block {
     background: #f0f7ff;
@@ -202,7 +203,7 @@
     margin-bottom: 4px;
   }
   .channel-block p { margin: 0; font-size: 10.5pt; }
-
+ 
   /* ── RIGHTS LIST ──────────────────────────────────────────── */
   .rights-list {
     list-style: none;
@@ -216,7 +217,7 @@
     margin-bottom: 6px;
     border-radius: 0 4px 4px 0;
   }
-
+ 
   /* ── CONFIDENTIALITY BOX ──────────────────────────────────── */
   .conf-box {
     background: #e8f3ff;
@@ -226,7 +227,7 @@
     margin-bottom: 16px;
   }
   .conf-box h3 { color: #0d3a6b; margin-bottom: 8px; }
-
+ 
   /* ── FOOTER STRIP ─────────────────────────────────────────── */
   .footer-strip {
     background: #1a4f80;
@@ -238,7 +239,7 @@
     margin-top: 20px;
   }
   .footer-strip a { color: #a8d4ff; }
-
+ 
   /* ── IMPORTANT CALLOUT ────────────────────────────────────── */
   .callout {
     background: #fff8e1;
@@ -248,7 +249,7 @@
     margin-bottom: 14px;
     font-size: 10.5pt;
   }
-
+ 
   /* ── TABLE OF CONTENTS ────────────────────────────────────── */
   .toc-list {
     list-style: none;
@@ -268,7 +269,7 @@
   }
   .toc-list li a:hover { text-decoration: underline; }
   .toc-num { color: #4a7baa; font-size: 9.5pt; }
-
+ 
   /* ── ASISTENCIA PAGE ──────────────────────────────────────── */
   .asistencia-page {
     min-height: 640px;
@@ -354,7 +355,7 @@
     border-top: 1px dashed #90bce8;
     margin: 14px 0;
   }
-
+ 
   /* ── ANNEX TABLE ──────────────────────────────────────────── */
   .annex-table {
     width: 100%;
@@ -379,45 +380,7 @@
 </head>
 <body>
 <div class="page-wrap">
-
-  <!-- ════════════════ CONFIRMACIÓN DE ASISTENCIA ════════════ -->
-  <div class="asistencia-page">
-    <div class="asistencia-header">
-      <h2>Confirmación de Asistencia</h2>
-      <p>Socialización: Prevención y Reporte del Acoso Sexual Laboral &nbsp;|&nbsp; PRO TRANSPORTE</p>
-    </div>
-    <div class="asistencia-body">
-      <p>Para dejar constancia de tu participación en esta socialización, por favor diligencia el siguiente formulario de asistencia. Tu registro es <strong>obligatorio</strong> y garantiza el cumplimiento de los compromisos de capacitación de la empresa.</p>
-
-      <div class="asistencia-iframe-wrap">
-        <iframe
-          src="https://forms.cloud.microsoft/pages/responsepage.aspx?id=AxPjAzvOo0-wBayv2Sgc0QAWshW33KxDmcgBcaqeFx9UN0lRSERNNFNZSUIwT0RJSDNJOTQ4VDJFRC4u&route=shorturl"
-          title="Formulario de Confirmación de Asistencia"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <hr class="asistencia-divider"/>
-
-      <p style="text-align:center; font-size:10pt; color:#4a7baa; margin-bottom:10px;">
-        Si el formulario no carga correctamente en tu navegador, haz clic en el botón para abrirlo directamente:
-      </p>
-      <p style="text-align:center; margin-bottom:6px;">
-        <a class="btn-form"
-           href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=AxPjAzvOo0-wBayv2Sgc0QAWshW33KxDmcgBcaqeFx9UN0lRSERNNFNZSUIwT0RJSDNJOTQ4VDJFRC4u&route=shorturl"
-           target="_blank" rel="noopener">
-          Abrir Formulario de Asistencia
-        </a>
-      </p>
-      <p class="asistencia-note">
-        Todos los datos registrados son confidenciales y se usan únicamente con fines de control de asistencia.
-      </p>
-    </div>
-  </div>
-
-  <div style="break-before: page"></div>
-
+ 
   <!-- ════════════════════ PORTADA ════════════════════ -->
   <div class="cover">
     <div class="logo-bar">PRO TRANSPORTE S.A.S &nbsp;|&nbsp; Sistema Integrado de Gestión</div>
@@ -427,9 +390,9 @@
     <div class="badge">Código F-GE-28 &nbsp;|&nbsp; Versión 1 &nbsp;|&nbsp; Mayo 2026</div>
     <p class="meta">Elaboró: Gestión Estratégica y HSEQ &nbsp;|&nbsp; Aprobó: Representante Legal</p>
   </div>
-
+ 
   <div style="break-before: page"></div>
-
+ 
   <!-- ════════════════════ TABLA DE CONTENIDO ════════════════════ -->
   <div class="chapter">
     <div class="section-header">Contenido de esta Cartilla</div>
@@ -448,10 +411,11 @@
         <li><a href="#cocola">11. El COCOLA en nuestra empresa</a><span class="toc-num">pág. 8</span></li>
         <li><a href="#compromisos">12. Compromisos de la Empresa</a><span class="toc-num">pág. 8</span></li>
         <li><a href="#anexos">13. Recursos y Anexos</a><span class="toc-num">pág. 9</span></li>
+        <li><a href="#asistencia">14. Confirmación de Asistencia</a><span class="toc-num">pág. 10</span></li>
       </ul>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 1. DEFINICIÓN ════════════════════ -->
   <div class="chapter" id="definicion">
     <div class="section-header">1. ¿Qué es el Acoso Sexual Laboral?</div>
@@ -463,7 +427,7 @@
       <p><strong>Importante:</strong> el acoso puede ocurrir una sola vez si es lo suficientemente grave, o de manera reiterada con menor intensidad. En ambos casos constituye una conducta sancionable.</p>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 2. MARCO NORMATIVO ════════════════════ -->
   <div id="norma">
     <div class="section-header">2. Marco Normativo</div>
@@ -477,7 +441,7 @@
       <p style="font-size:10pt; color:#4a7baa;">PRO TRANSPORTE S.A.S actúa bajo estos marcos y cuenta con el Comité de Convivencia Laboral (COCOLA) para la atención de los casos.</p>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 3. TIPOS DE CONDUCTAS ════════════════════ -->
   <div class="chapter" id="conductas">
     <div class="section-header">3. Tipos de Conductas que Constituyen Acoso Sexual Laboral</div>
@@ -513,7 +477,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 4. QUÉ NO ES ════════════════════ -->
   <div id="no-es">
     <div class="section-header">4. ¿Qué NO es Acoso Sexual Laboral?</div>
@@ -528,7 +492,7 @@
       <p>Si tienes duda sobre si una situación constituye acoso sexual laboral, puedes consultar con el COCOLA de manera confidencial.</p>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 5. DERECHOS ════════════════════ -->
   <div class="chapter" id="derechos">
     <div class="section-header">5. Tus Derechos como Colaborador/a</div>
@@ -545,7 +509,7 @@
       </ul>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 6. CÓMO REPORTAR ════════════════════ -->
   <div id="como-reportar">
     <div class="section-header">6. ¿Cómo Presentar un Reporte?</div>
@@ -564,7 +528,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 7. CANALES ════════════════════ -->
   <div class="chapter" id="canales">
     <div class="section-header">7. Canales de Reporte</div>
@@ -593,7 +557,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 8. PROCESO INTERNO ════════════════════ -->
   <div id="proceso">
     <div class="section-header">8. Proceso Interno de Atención</div>
@@ -630,7 +594,7 @@
       </table>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 9. MEDIDAS DE PROTECCIÓN ════════════════════ -->
   <div class="chapter" id="proteccion">
     <div class="section-header">9. Medidas de Protección Disponibles</div>
@@ -649,7 +613,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 10. CONFIDENCIALIDAD ════════════════════ -->
   <div id="confidencialidad">
     <div class="section-header">10. Confidencialidad</div>
@@ -667,7 +631,7 @@
       </ul>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 11. COCOLA ════════════════════ -->
   <div class="chapter" id="cocola">
     <div class="section-header">11. El COCOLA en PRO TRANSPORTE</div>
@@ -686,7 +650,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 12. COMPROMISOS ════════════════════ -->
   <div id="compromisos">
     <div class="section-header">12. Compromisos de PRO TRANSPORTE</div>
@@ -703,7 +667,7 @@
       </ul>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ 13. ANEXOS / RECURSOS ════════════════════ -->
   <div class="chapter" id="anexos">
     <div class="section-header">13. Recursos y Anexos</div>
@@ -748,14 +712,52 @@
       </table>
     </div>
   </div>
-
+ 
   <!-- ════════════════════ PIE DE PÁGINA ════════════════════ -->
   <div class="footer-strip">
     PRO TRANSPORTE S.A.S &nbsp;|&nbsp; COCOLA – Comité de Convivencia Laboral &nbsp;|&nbsp;
     Gestora HSEQ &nbsp;|&nbsp; <a href="mailto:gerencia@protransporte.com.co">gerencia@protransporte.com.co</a>
     &nbsp;|&nbsp; Código F-GE-28 – Versión 1 – Mayo 2026
   </div>
-
+ 
+  <!-- ════════════════════ CONFIRMACIÓN DE ASISTENCIA ════════════ -->
+  <div class="chapter" id="asistencia">
+    <div class="asistencia-page">
+      <div class="asistencia-header">
+        <h2>Confirmación de Asistencia</h2>
+        <p>Socialización: Prevención y Reporte del Acoso Sexual Laboral &nbsp;|&nbsp; PRO TRANSPORTE</p>
+      </div>
+      <div class="asistencia-body">
+        <p>Para dejar constancia de tu participación en esta socialización, por favor diligencia el siguiente formulario de asistencia. Tu registro es <strong>obligatorio</strong> y garantiza el cumplimiento de los compromisos de capacitación de la empresa.</p>
+ 
+        <div class="asistencia-iframe-wrap">
+          <iframe
+            src="https://forms.cloud.microsoft/pages/responsepage.aspx?id=AxPjAzvOo0-wBayv2Sgc0QAWshW33KxDmcgBcaqeFx9UN0lRSERNNFNZSUIwT0RJSDNJOTQ4VDJFRC4u&route=shorturl"
+            title="Formulario de Confirmación de Asistencia"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+ 
+        <hr class="asistencia-divider"/>
+ 
+        <p style="text-align:center; font-size:10pt; color:#4a7baa; margin-bottom:10px;">
+          Si el formulario no carga correctamente en tu navegador, haz clic en el botón para abrirlo directamente:
+        </p>
+        <p style="text-align:center; margin-bottom:6px;">
+          <a class="btn-form"
+             href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=AxPjAzvOo0-wBayv2Sgc0QAWshW33KxDmcgBcaqeFx9UN0lRSERNNFNZSUIwT0RJSDNJOTQ4VDJFRC4u&route=shorturl"
+             target="_blank" rel="noopener">
+            Abrir Formulario de Asistencia
+          </a>
+        </p>
+        <p class="asistencia-note">
+          Todos los datos registrados son confidenciales y se usan únicamente con fines de control de asistencia.
+        </p>
+      </div>
+    </div>
+  </div>
+ 
 </div><!-- /page-wrap -->
 </body>
 </html>
